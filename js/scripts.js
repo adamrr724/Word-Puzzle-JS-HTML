@@ -24,16 +24,15 @@ var hangman = function(userWord) {
 
 
 
-// $(document).ready(function(event) {
-//     $("form#count").submit(function(event){
-//
-//       var countBy= parseInt($("input#message1").val());
-//       var countTo = parseInt($("input#message2").val());
-//       var result = countUp(countTo, countBy);
-//
-//   $(".result").text(result);
-//   $("#result").show();
-//   event.preventDefault();
-//
-// });
-// });
+$(document).ready(function(event) {
+    $("form#hangman").submit(function(event){
+
+      var word = $("input#message1").val();
+      var result = hangman(word);
+
+  $(".result").text(result);
+  $("#result").show();
+  event.preventDefault();
+
+});
+});
